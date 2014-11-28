@@ -1,0 +1,27 @@
+load('semeion.data');
+img = semeion(:,1:256);
+label = semeion(:,257:266);
+
+%%K-D Tree
+% KDTree = CreateKDTree(img(1:1000,:),label); 
+% 
+% n = size(img,1);
+% m = 0;
+% for i = 1000:n
+%     L = KDNNClassify(img(i,:),KDTree);
+%     if L == label(i,:)
+%       m = m + 1;
+%     end
+% end
+
+%OneTemplate Classify
+tra
+[Templates,Labels] = OneTemplateTrain(img(1:1000,:),label(1:1000,:));
+n = size(img,1);
+m = 0;
+for i = 1000:n
+    L = OneTemplatesClassify(img(i,:),Templates,Labels);
+    if L == label(i,:)
+      m = m + 1;
+    end
+end

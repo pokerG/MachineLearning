@@ -1,0 +1,10 @@
+function output = KNNClassify( X,S,T,K )
+    Labels = unique(T);
+    c = length(Labels); %Àà±ðÊý
+    m = size(X,1);
+    
+    
+
+
+end
+
