@@ -1,8 +1,8 @@
 function KDTree = CreateKDTree( S,Labels )
 
 n = size(S,1);
-KDTree(n)=struct('Parrent',[],'Left',[],'Right',[],'s',[],'Sample',[],'Label',[]);
 global KDTree;
+KDTree(n)=struct('Parrent',[],'Left',[],'Right',[],'s',[],'Sample',[],'Label',[]);
 %根节点建树
 KDTree(1).Parrent = 0;
 Create(S,Labels,1);
