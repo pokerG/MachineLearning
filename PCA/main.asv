@@ -1,8 +1,0 @@
-clear; clc;
-load('faces.csv');
-[U,S] = PCA(faces');
-Z = project(faces
-Y = E * Y';
-y1 = Y(:,1);
-y1 = reshape(y1,50,50);
-imtool(y1);

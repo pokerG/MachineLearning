@@ -20,8 +20,8 @@ theta = zeros(M + 1, 1);
 n = length(y);
 lamda = 0.01;
 for i=1:num_iters
-   z = X' * (X*theta -y); %+ lamda * theta;
-   theta = theta * (1 - alpha * lamda / n) - alpha / n * z;
+   z = X' * (X*theta -y) + lamda * theta;
+   theta = theta - alpha / n * z;
 end
 
 plot(tmp, X*theta);
